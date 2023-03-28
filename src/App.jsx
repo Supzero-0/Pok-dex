@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import MyTitle from "./components/MyTitle"
 import PokemonCard from "./components/PokemonCard"
+import NavBar from "./components/NavBar"
 
 
 function App() {
@@ -56,8 +57,7 @@ function App() {
     <div className="App">
       <MyTitle />
       <PokemonCard pokemon={pokemon} />
-      {pokemonIndex > 0 ? <button onClick={handlePrevious}>Précédent</button> : null}
-      {pokemonIndex < pokemonList.length - 1 ? <button onClick={handleNext}>Suivant</button> : null}
+      <NavBar handleNext={handleNext} handlePrevious={handlePrevious} pokemonIndex={pokemonIndex} pokemonList={pokemonList} />
     </div>
   )
 }
