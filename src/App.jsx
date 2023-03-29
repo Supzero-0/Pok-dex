@@ -57,7 +57,7 @@ function App() {
     <div className="App">
       <MyTitle />
       <PokemonCard pokemon={pokemon} />
-      <NavBar handleNext={handleNext} handlePrevious={handlePrevious} pokemonIndex={pokemonIndex} pokemonList={pokemonList} />
+      <NavBar setPokemonIndex={setPokemonIndex} pokemonList={pokemonList} />
     </div>
   )
 }
